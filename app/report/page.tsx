@@ -10,6 +10,7 @@ import TopDonors from '@/components/charts/TopDonors';
 import TopRestaurants from '@/components/charts/TopRestaurants';
 import TransactionTable from '@/components/table/TransactionTable';
 import SectionNav from '@/components/navigation/SectionNav';
+import ReportChat from '@/components/report/ReportChat';
 import { ArrowLeft } from 'lucide-react';
 
 function ReportContent() {
@@ -129,6 +130,9 @@ function ReportContent() {
           </div>
         </div>
       </div>
+
+      {/* AI Chat - Only render when report is loaded */}
+      {report && <ReportChat report={report} />}
     </div>
   );
 }
